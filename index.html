@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="pokedex">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  
+</head>
+<body>
+<div ng-controller="PokedexController as pokedex">
+  <div ng-repeat="pokemon in pokedex.pokemons">
+    <img src="http://{{ pokemon.name }}.jpg.to" alt="{{ pokemon.name }}">
+    <h1>{{ pokemon.name }}</h1>
+    <p>{{ pokemon.type }}</p>
+    <p>{{ pokemon.weight * 0.453592 }} kg</p>
+    <p>{{ pokemon.description }}</p>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+
