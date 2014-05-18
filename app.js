@@ -12,8 +12,23 @@
     $log.log(pokedex);
   } ]);
 
-  app.controller("ReviewController", function(){
-    this.review={};
+  app.controller("TabsController", function(){
+    this.tab = 1;
+
+    this.setTab = function(n){
+      this.tab = n;
+    };
+
+    this.isSelected = function(n){
+      return this.tab === n;
+    };
+  });
+
+  app.controller("CommentController", function(){
+    this.comment = {
+      body: "something",
+      email: "someone@somewhere.com"
+    };
   });
 
 })();
