@@ -5,8 +5,12 @@
     this.pokemons = pokemons;
   });
 
+  app.controller("ReviewController", function(){
+    this.review={};
+  });
+
   var pokemons = [{
-    name: 'Bulbasaur',
+    name: 'bulbasaur',
     type: 'Grass',
     weight: 15.2,
     description: "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokémon.",
