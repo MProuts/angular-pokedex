@@ -5,7 +5,17 @@
             "imageUrl": "img/jigglypuff.svg",
             "type": "Normal",
             "weight": "12.2",
-            "description": "It captivates foes with its huge, round eyes, then lulls them to sleep by singing a soothing melody."
+            "description": "It captivates foes with its huge, round eyes, then lulls them to sleep by singing a soothing melody.",
+            "comments": [
+              {
+                  "body": "I love jigglypuff!",
+                  "email": "michael@example.com"
+              },
+              {
+                  "body": "Jigglypuff is my favorite pokemon.",
+                  "email": "andrew@example.com"
+              }
+           ]
         },
         {
             "name": "bulbasaur",

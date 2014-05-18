@@ -1,7 +1,7 @@
 (function(){
   var app = angular.module("pokedex", [ ]);
 
-  app.controller("PokedexController", [ '$http', '$log', function($http, $log){
+  app.controller("PokemonController", [ '$http', '$log', function($http, $log){
     var pokedex = this;
     pokedex.pokemons = [];
 
@@ -29,6 +29,41 @@
       body: "something",
       email: "someone@somewhere.com"
     };
+  });
+
+  app.directive("nameAndImage", function(){
+    return {
+      restrict: "E",
+      templateUrl: "templates/name-and-image.html"
+    }
+  });
+
+  app.directive("navigation", function(){
+    return {
+      restrict: "E",
+      templateUrl: "templates/navigation-tab.html"
+    }
+  });
+
+  app.directive("statsTab", function(){
+    return {
+      restrict: "E",
+      templateUrl: "templates/stats-tab.html"
+    }
+  });
+
+  app.directive("descriptionTab", function(){
+    return {
+      restrict: "E",
+      templateUrl: "templates/description-tab.html"
+    }
+  });
+
+  app.directive("commentsTab", function(){
+    return {
+      restrict: "E",
+      templateUrl: "templates/comments-tab.html"
+    }
   });
 
 })();

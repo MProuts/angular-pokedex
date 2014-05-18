@@ -9,72 +9,18 @@
 <div class="container">
   <div class="row">
 
-    <div ng-controller="PokedexController as pokedex">
-      <div ng-repeat="pokemon in pokedex.pokemons">
-        {{ pokemon.image }}
-        <img ng-src="{{ pokemon.imageUrl }}">
-        <h1>{{ pokemon.name }}</h1>
+    <div ng-controller="PokemonController as pokemonCtrl">
+
+      <div ng-repeat="pokemon in pokemonCtrl.pokemons">
+        <name-and-image></name-and-image>
 
         <div class="tabs" ng-controller="TabsController as tabs">
-          <div class="nav">
-            <ul class="nav nav-pills">
-              <li ng-class="{ active: tabs.isSelected(1) }">
-              <a ng-click="tabs.setTab(1)" >Stats</a>
-              </li>
-              <li ng-class="{ active: tabs.isSelected(2) }">
-              <a ng-click="tabs.setTab(2)">Description</a>
-              </li>
-              <li ng-class="{ active: tabs.isSelected(3) }">
-              <a ng-click="tabs.setTab(3)">Comments</a>
-              </li>
-            </ul>
-          </div>
-
-        <div ng-show="tabs.tab === 1">
-          <h3>Stats</h3>
-          <blockquote>
-          <table class="table">
-            <tr>
-              <td><strong>type:</strong></td><td>{{ pokemon.type }}</td>
-            </tr>
-            <tr>
-              <td><strong>weight:</strong></td><td>{{ pokemon.weight * 0.453592 }} kg</td>
-            </tr>
-          </table>
-        </blockquote>
+          <navigation></navigation>
+          <stats-tab></stats-tab>
+          <description-tab></description-tab>
+          <comments-tab></comments-tab>
         </div>
 
-        <div ng-show="tabs.isSelected(2)">
-          <h3>Description</h3>
-          <blockquote>{{ pokemon.description }}</blockquote>
-        </div>
-
-        <div ng-show="tabs.isSelected(3)">
-          <h3>Comments</h3>
-          <form ng-controller="CommentController as commentCtrl">
-
-            <blockquote>
-              <p>{{commentCtrl.comment.body}}</p>
-              <footer><cite>{{commentCtrl.comment.email}}</cite></footer>
-            </blockquote>
-
-            <div class="form-group">
-              <label id="body">Comment:</label>
-              <input class="form-control" type="text" ng-model="commentCtrl.comment.body"/>
-            </div>
-
-            <div class="form-group">
-              <label id="email">Email:</label>
-              <input class="form-control" type="email" ng-model="commentCtrl.comment.email" />
-            </div>
-
-            <div class="form-group">
-              <input type="submit" class="btn btn-large btn-danger">
-            </div>
-          </form>
-        </div>
-
-        </div>
       </div>
     </div>
 
