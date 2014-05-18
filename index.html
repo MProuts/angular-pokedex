@@ -8,7 +8,8 @@
 <body>
 <div ng-controller="PokedexController as pokedex">
   <div ng-repeat="pokemon in pokedex.pokemons">
-    <img ng-src="{{ 'http://' + pokemon.name + '.jpg.to'}}" alt="{{ pokemon.name }}">
+    {{ pokemon.image }}
+    <img ng-src="{{ pokemon.image }}">
     <h1>{{ pokemon.name }}</h1>
     <p>{{ pokemon.type }}</p>
     <p>{{ pokemon.weight * 0.453592 }} kg</p>
