@@ -9,8 +9,14 @@
 <body>
 <div class="container">
   <div class="row">
-
     <div ng-controller="PokemonController as pokemonCtrl">
+      <table>
+        <tr>
+          <td ng-repeat="pokemon in pokemonCtrl.pokemons">
+            <img src="img/pokeball_medium.svg">
+          </td>
+        </tr>
+      </table>
 
       <div ng-repeat="pokemon in pokemonCtrl.pokemons">
         <name-and-image></name-and-image>
