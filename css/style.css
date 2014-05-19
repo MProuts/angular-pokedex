@@ -1,0 +1,15 @@
+.ng-invalid.ng-dirty {
+  border-color: #FA787E
+}
+
+.ng-valid.ng-dirty {
+  border-color: #78FA89
+}
+
+
+navigation .nav-pills>li.active>a, .nav-pills>li.active>a:hover {
+  background-color: #003DC8;
+}
+
+
+

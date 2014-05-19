@@ -25,10 +25,11 @@
   });
 
   app.controller("CommentController", function(){
-    this.comment = {
-      body: "something",
-      email: "someone@somewhere.com"
-    };
+    this.comment = {};
+    this.addComment = function(pokemon){
+      pokemon.comments.push(this.comment);
+      this.comment = {};
+    }
   });
 
   app.directive("nameAndImage", function(){
