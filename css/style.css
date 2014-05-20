@@ -7,9 +7,19 @@
 }
 
 
-navigation .nav-pills>li.active>a, .nav-pills>li.active>a:hover {
+.navigation .nav-pills>li.active>a, .nav-pills>li.active>a:hover {
   background-color: #003DC8;
 }
+
+.navigation a, navigation:hover {
+  color: #333;
+}
+
+.btn.btn-red {
+  color: #fff;
+  background-color: #D17376;
+}
+
 
 
 

@@ -5,8 +5,9 @@
     var pokedex = this;
     pokedex.pokemons = [];
 
-    $http.get('/pokemons.json').success(function(data){
-      pokedex.pokemons = data["pokemons"];
+    $http.get('http://localhost:3000/pokemon.json').success(function(data){
+      $log.log(data);
+      pokedex.pokemons = data;
     });
 
     $log.log(pokedex);
