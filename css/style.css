@@ -7,8 +7,12 @@
 }
 
 
-.navigation .nav-pills>li.active>a, .nav-pills>li.active>a:hover {
+.navigation .nav-pills>li.active>a, .nav-pills>li.active>a:hover, a.trash {
   background-color: #003DC8;
+}
+
+a.trash {
+  color: #003DC8;
 }
 
 .navigation a, navigation:hover {

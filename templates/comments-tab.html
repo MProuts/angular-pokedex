@@ -3,8 +3,10 @@
 
   <!-- existing comments -->
   <blockquote ng-repeat="comment in pokemon.comments">
-    <p>{{comment.body}}</p>
-    <footer><cite>{{comment.email}}</cite></footer>
+    <p>
+    {{comment.body}}
+    </p>
+    <footer><cite>{{comment.email}}</cite> | <a href="#" >delete</a></footer>
   </blockquote>
 
   <!-- current comment -->

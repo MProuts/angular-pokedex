@@ -10,7 +10,6 @@
       pokedex.pokemons = data;
     });
 
-    $log.log(pokedex);
   } ]);
 
   app.controller("TabsController", function(){
@@ -25,13 +24,18 @@
     };
   });
 
-  app.controller("CommentController", function(){
+  app.controller("CommentController", [ '$http', '$log', function($http, $log){
     this.comment = {};
     this.addComment = function(pokemon){
       pokemon.comments.push(this.comment);
+      var mydata = { comment: this.comment };
+      var myurl = 'http://localhost:3000/pokemon/' + pokemon.id + '/comments';
+      $log.log(mydata);
+      $log.log(myurl);
+      $.post(myurl, mydata, 'jsonp')
       this.comment = {};
     }
-  });
+  } ]);
 
   app.directive("nameAndImage", function(){
     return {
