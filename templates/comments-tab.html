@@ -2,11 +2,12 @@
   <h3>Comments</h3>
 
   <!-- existing comments -->
-  <blockquote ng-repeat="comment in pokemon.comments">
+  <blockquote ng-repeat="comment in pokemon.comments" class="comment">
+    <a class="delete-button">x</a>
     <p>
     {{comment.body}}
     </p>
-    <footer><cite>{{comment.email}}</cite> | <a href="#" >delete</a></footer>
+    <footer><cite>{{comment.email}}</cite></footer>
   </blockquote>
 
   <!-- current comment -->

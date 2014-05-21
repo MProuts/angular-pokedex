@@ -11,8 +11,19 @@
   background-color: #003DC8;
 }
 
-a.trash {
-  color: #003DC8;
+.comment:hover {
+  background: #eee;
+}
+
+.delete-button {
+  float: right;
+  color: #999;
+}
+
+.delete-button:hover {
+  text-decoration:none;
+  color:#444;
+  cursor:pointer;
 }
 
 .navigation a, navigation:hover {
@@ -23,7 +34,5 @@ a.trash {
   color: #fff;
   background-color: #D17376;
 }
-
-
 
 
