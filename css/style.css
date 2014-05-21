@@ -11,6 +11,9 @@
   background-color: #003DC8;
 }
 
+.comment {
+  padding-right: 10px;
+}
 .comment:hover {
   background: #eee;
 }
@@ -18,6 +21,15 @@
 .delete-button {
   float: right;
   color: #999;
+  padding-left: 20px;
+}
+
+.comment .delete-button {
+  visibility: hidden;
+}
+
+.comment:hover .delete-button {
+  visibility: visible;
 }
 
 .delete-button:hover {
