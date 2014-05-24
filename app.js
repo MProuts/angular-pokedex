@@ -35,6 +35,27 @@
       $.post(myurl, mydata, 'jsonp')
       this.comment = {};
     }
+
+    this.deleteComment = function(pokemon, comment){
+      var myurl = 'http://localhost:3000/pokemon/' + pokemon.id + '/comments/' + comment.id
+      $log.log(myurl);
+      //$.ajax({
+      //  url: myurl,
+      //  type: 'post',
+      //  dataType: 'jsonp',
+      //  data: {"_method":"delete"}
+      //});
+     $.ajax({
+       url: myurl,
+       dataType: "jsonp",
+       type: "POST",
+       processData: false,
+       contentType: "application/json",
+       beforeSend: function(xhr) {
+         xhr.setRequestHeader("X-Http-Method-Override", "DELETE");
+       }
+     });
+    }
   } ]);
 
   app.directive("nameAndImage", function(){
