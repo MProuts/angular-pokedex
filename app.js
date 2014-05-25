@@ -47,13 +47,9 @@
       //});
      $.ajax({
        url: myurl,
-       dataType: "jsonp",
-       type: "POST",
-       processData: false,
+       dataType: "json",
+       type: "DELETE",
        contentType: "application/json",
-       beforeSend: function(xhr) {
-         xhr.setRequestHeader("X-Http-Method-Override", "DELETE");
-       }
      });
     }
   } ]);
