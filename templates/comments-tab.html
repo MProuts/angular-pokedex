@@ -3,7 +3,6 @@
 
   <!-- existing comments -->
   <blockquote ng-repeat="comment in pokemon.comments" class="comment" ng-show="!comment.deleted">
-    <p>id: {{comment.id}}</p>
     <a class="delete-button" ng-click="commentCtrl.deleteComment(pokemon, comment)"><span class="glyphicon glyphicon-trash"></span></a>
     <p>
     {{comment.body}}
@@ -31,7 +30,6 @@
 
     <div class="form-group pull-right">
       <input type="submit" class="btn btn-large btn-warning">
-      <button ng-click="pokemonCtrl.refresh()"></button>
     </div>
   </form>
 </div>

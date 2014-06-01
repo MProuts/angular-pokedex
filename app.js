@@ -4,19 +4,12 @@
   app.controller("PokemonController", [ '$scope', '$http', '$log', function($scope, $http, $log){
     var pokedex = this;
     pokedex.pokemons = [];
-    loadData();
-
-    $scope.refresh = function() {
-      loadData();
-      alert("refreshed!");
-    };
-
-    function loadData() {
-      $http.get('http://localhost:3000/pokemon.json').success(function(data){
+    $http
+      .get('http://localhost:3000/pokemon.json')
+      .success(function(data){
         pokedex.pokemons = data;
-      });
-    };
-  } ]);
+    });
+} ]);
 
   app.controller("TabsController", function(){
     this.tab = 1;
